@@ -1,0 +1,9 @@
+{
+    "input": "result.json",
+    "output": "output",
+    "targets": {
+        "JP": [
+            "楓原万葉"
+        ]
+    }
+}
