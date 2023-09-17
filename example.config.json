@@ -1,5 +1,5 @@
 {
-    "input": "result.json",
+    "input_dir": "input",
     "output": "output",
     "targets": {
         "JP": [
