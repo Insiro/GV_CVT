@@ -2,11 +2,8 @@ import json
 from collections import defaultdict
 from os import makedirs, path
 
-from type import *
-from config import Config
-
-
-config = Config.load()
+from .type import *
+from .config import Config
 
 
 def script_extract(config: Config):
@@ -34,6 +31,3 @@ def script_extract(config: Config):
         fname = path.join(out_folder, key + ".json")
         with open(fname, "w", encoding="UTF-8") as f:
             json.dump(obj, f, indent=2, ensure_ascii=False)
-
-
-script_extract(config)
