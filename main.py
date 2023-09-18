@@ -6,4 +6,4 @@ from os import path
 config = Config.load()
 splited = script_extract(config)
 to = cvtScriptFile2Key(splited["KR"])
-convertName(splited["JP"], to, path.join(config.input, "fem_kazuha"))
+convertName(splited["JP"], to, path.join(config.input_pck))

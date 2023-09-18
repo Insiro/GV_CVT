@@ -196,5 +196,6 @@ pyrightconfig.json
 
 *.json
 !example.*
-/output
-/input
+/output/*
+/input/*
+/input_pck/*
