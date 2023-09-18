@@ -9,6 +9,9 @@ class TextInstance(TypedDict):
     type: str
     hash: str
 
+class NpcSelect(TypedDict):
+    language:str
+    npcName:str
 
 ScriptSection = dict[str, TextInstance]
 """key: hash"""

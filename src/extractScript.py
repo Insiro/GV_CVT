@@ -10,18 +10,26 @@ def script_extract(config: Config, save=False) -> LangSplitedScript:
     with open(path.join(config.input, "result.json"), encoding="UTF-8") as ji:
         script: ScriptSection = json.load(ji)
 
-    targets = config.targets
-    splited: LangSplitedScript = {key: defaultdict(None) for key in targets.keys()}
+    src_lang = config._from["language"]
+    src_npc = config._from["npcName"]
+    dst_lang = config.to["language"]
+    dst_npc = config.to["npcName"]
+
+    splited: LangSplitedScript = {
+        src_lang: defaultdict(None),
+        dst_lang: defaultdict(None),
+    }
     for key, obj in script.items():
-        lang = obj["language"]
-        if lang not in splited:
-            continue
         if "npcName" not in obj:
             continue
-        obj["hash"] = key
-        if obj["npcName"] not in targets[lang]:
+        lang = obj["language"]
+        if lang not in [src_lang, dst_lang]:
             continue
+        if obj["npcName"] not in [src_npc, dst_npc]:
+            continue
+        obj["hash"] = key
         splited[lang][key] = obj
+
     __save_script(config, splited)
     return splited
 

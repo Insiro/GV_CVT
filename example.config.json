@@ -2,12 +2,12 @@
     "input_dir": "input",
     "input_pck": "input_pck",
     "output": "output",
-    "targets": {
-        "KR": [
-            "카에데하라 카즈하"
-        ],
-        "JP": [
-            "楓原万葉"
-        ]
+    "From": {
+        "language": "JP",
+        "npcName": "楓原万葉"
+    },
+    "To": {
+        "npcName": "카에데하라 카즈하",
+        "language": "KR"
     }
 }

@@ -36,3 +36,4 @@ def convertName(
             target = path.join(dir, new_hash + ".wem")
 
             rename(original, target)
+            print(original, target)

@@ -1,21 +1,23 @@
 import json
 from os import makedirs, path
+from .type import NpcSelect
 
 
 class Config:
     input: str
     input_pck: str
     output: str
-    # key: Langauge, value : [npcName]
-    targets: dict[str, list[str]]
+    _from: NpcSelect
+    to: NpcSelect
 
     def __init__(
-        self, input_dir="input", output="output", input_pck="input_pck", targets={}
+        self, input_dir="input", output="output", input_pck="input_pck", From={}, To={}
     ):
         self.input = input_dir
-        self.output = output
-        self.targets = targets
         self.input_pck = input_pck
+        self.output = output
+        self._from = From
+        self.to = To
 
     def init_dir(self):
         assert path.exists(self.input_dir), f"{self.input_dir} is wrong input folder"
