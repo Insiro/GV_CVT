@@ -29,8 +29,8 @@ def script_extract(config: Config, save=False) -> LangSplitedScript:
             continue
         obj["hash"] = key
         splited[lang][key] = obj
-
-    __save_script(config, splited)
+    if save:
+        __save_script(config, splited)
     return splited
 
 
