@@ -199,3 +199,4 @@ pyrightconfig.json
 /output/*
 /input/*
 /input_pck/*
+/wem/*

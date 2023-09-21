@@ -1,6 +1,6 @@
 {
     "input_dir": "input",
-    "input_pck": "input_pck",
+    "wem": "wem",
     "output": "output",
     "From": {
         "language": "JP",

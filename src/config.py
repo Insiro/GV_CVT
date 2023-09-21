@@ -5,16 +5,16 @@ from .type import NpcSelect
 
 class Config:
     input: str
-    input_pck: str
+    wem: str
     output: str
     _from: NpcSelect
     to: NpcSelect
 
     def __init__(
-        self, input_dir="input", output="output", input_pck="input_pck", From={}, To={}
+        self, input_dir="input", output="output", wem="wem", From={}, To={}
     ):
         self.input = input_dir
-        self.input_pck = input_pck
+        self.wem = wem
         self.output = output
         self._from = From
         self.to = To
