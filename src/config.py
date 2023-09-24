@@ -6,13 +6,21 @@ from .type import NpcSelect
 class Config:
     input: str
     wem: str
+    mod: str | None
     output: str
     _from: NpcSelect
     to: NpcSelect
 
     def __init__(
-        self, input_dir="input", output="output", wem="wem", From={}, To={}
+        self,
+        mod: str | None = None,
+        input_dir="input",
+        output="output",
+        wem="wem",
+        From={},
+        To={},
     ):
+        self.mod = mod
         self.input = input_dir
         self.wem = wem
         self.output = output

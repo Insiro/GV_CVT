@@ -2,6 +2,7 @@
     "input_dir": "input",
     "wem": "wem",
     "output": "output",
+    "mod": "input\\mod",
     "From": {
         "language": "JP",
         "npcName": "楓原万葉"
