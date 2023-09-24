@@ -68,7 +68,7 @@ def apply(src: str, config: Config, actions: HashedActions):
     if path.isdir(config.wem):
         rmtree(config.wem)
     for hash, item in actions.items():
-        ext_dir = path.join(config.wem, item.dst_ext)
+        ext_dir = path.abspath(path.join(config.wem, item.dst_ext))
         if not path.isdir(ext_dir):
             makedirs(ext_dir)
         copyfile(
